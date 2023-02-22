@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interogarea 3.a.</title>
+</head>
+<body>
+<h1><u>Interogarea 3.a.</u></h1>
+<p><b>Cerinta colocviu partial:</b> Să se găsească denumirea clasei, țara și deplasamentul pentru clasele de tip vas de linie
+  cu deplasament între 2000 tone și 4000 tone ordonate descrescător după țară și crescător
+  după deplasament.</p>
+<p><b>Cod SQL:</b><br>SELECT clasa, tara, deplasament<br>
+  FROM clase<br>
+  WHERE tip = 'vas de linie' AND TO_NUMBER(REPLACE(SUBSTR(deplasament, 1, LENGTH(deplasament)-5), ',')) BETWEEN 2000 AND 4000<br>
+  ORDER BY tara DESC, deplasament ASC;
+</p>
+<form action="rezultate3a.php" method=post>
+  <table >
+    <tr>
+      <td>Alegeti tipul navei:<select name = 'tip_nava'>
+        <option value=" 'vas de linie' ">vas de linie</option>
+        <option value=" 'cuirasat' ">cuirasat</option>
+        <option value=" 'distrugator' ">distrugator</option>
+        <option value=" 'crucisator' ">crucisator</option>
+      </select></td>
+    </tr>
+
+    <tr>
+      <td>Scrieti intervalul deplasamentului:</td>
+      <td><input type = number name = "limita_inf" min = "0"> - <input type = number name = "limita_sup" min ="0"> tone</td>
+    </tr>
+    <tr>
+      <td colspan="2" ><input type=submit value="Afiseaza"></td>
+    </tr>
+  </table>
+</form>
+<a href="Pagina_principala.html">Inapoi la pagina principala!</a>
+</body>
+</html>

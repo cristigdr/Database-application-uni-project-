@@ -1,0 +1,53 @@
+body{
+    background: #cdc2b6;
+
+}
+#menu {
+    text-align: center;
+    width:300px;
+    height: 500px;
+    padding: 20px;
+    background: #9ab0c9;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.23);
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#btn-group {
+    color: white;
+    padding: 10px 24px;
+    cursor: pointer;
+    width: 50%;
+    display: block;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -42%);
+
+}
+
+#btn-group button:hover {
+    background-color: #3c69e7;
+}
+
+.button1{
+    border-radius: 4px;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    font-size: 14px;
+    border: 2px solid #3c69e7;
+    margin: 2px;
+    width: 175px;
+    height: fit-content;
+}
+
+a {
+    text-decoration: none;
+}

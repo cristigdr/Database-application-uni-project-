@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interogarea3b</title>
+</head>
+<body>
+<h1><u>Interogarea 3.b.</u></h1>
+<p><b>Cerinta colocviu partial:</b> Să se găsească numele navelor și anul lansării pentru navele lansate după 1975 ordonate
+  crescător după anul lansării.</p>
+<p><b>Cod SQL:</b><br>
+  SELECT nume, anul_lansarii<br>
+  FROM nave<br>
+  WHERE anul_lansarii  > 1975<br>
+  ORDER BY anul_lansarii;</p>
+<form action="rezultate3b.php" method=post>
+  <table>
+    <tr>
+      <td>Introduceti anul lansarii:</td>
+      <td><input type = number name = "p_anul_lansarii" min = "1" max = "9999">
+    </tr>
+    <tr>
+      <td colspan="2" ><input type=submit value="Afiseaza"></td>
+    </tr>
+  </table>
+</form>
+<a href="Pagina_principala.html">Inapoi la pagina principala!</a>
+</body>
+</html>

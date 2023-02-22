@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interogarea5a</title>
+</head>
+<body>
+<h1><u>Interogarea 5.a.</u></h1>
+<p><b>Cerinta colocviu partial:</b> Să se găsească detaliile navelor ce au numărul minim de arme.</p>
+<p><b>Cod SQL:</b><br>
+  SELECT *<br>
+  FROM nave NATURAL JOIN clase<br>
+  WHERE nr_arme <= ALL(SELECT nr_arme FROM clase NATURAL JOIN nave)</p>
+<form action="rezultate5a.php" method=post>
+  <table>
+    <td>Alegeti coloana: <select name = 'p_col'>
+      <option value=" 'anul_lansarii' ">Anul lansarii</option>
+      <option value=" 'nr_arme' ">Numar arme</option>
+    </select></td>
+    <tr>
+      <td>Alegeti minim sau maxim: <select name = 'p_op'>
+        <option value=" '<=' ">Minim</option>
+        <option value=" '>=' ">Maxim</option>
+      </select></td>
+    <tr>
+      <td colspan="2" ><input type=submit value="Afiseaza"></td>
+    </tr>
+  </table>
+</form>
+<a href="Pagina_principala.html">Inapoi la pagina principala!</a>
+</body>
+</html>
