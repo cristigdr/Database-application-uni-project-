@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interogarea4b</title>
+</head>
+<link rel="stylesheet" href="Style.css">
+<body>
+<div class="interogare">
+<h1>Interogarea 4.b.</h1>
+<p class="cerinta"><b>Cerinta colocviu partial:</b> Să se găsească perechi de țări (tara1, tara2) ce au nave din clase cu același
+    deplasament și tip identic. O pereche este unică în rezultat.</p>
+<p class="rezolvare"><b>Cod SQL:</b><br>
+    SELECT c1.tara, c2.tara<br>
+    FROM clase c1 JOIN clase c2 ON (c1.tara > c2.tara)<br>
+    WHERE c1.deplasament = c2.deplasament AND c1.tip = c2.tip;</p>
+<form action="rezultate4b.php" method=post class="formular">
+    <table>
+        <td>Alegeti coloana1: <select name = 'p_col1'>
+            <option value=" 'tip' ">Tip</option>
+            <option value=" 'nr_arme' ">Numar arme</option>
+            <option value=" 'diametru_tun' ">Diametru tun</option>
+            <option value=" 'deplasament' ">Deplasament</option>
+        </select></td>
+        <tr>
+            <td>Alegeti coloana2: <select name = 'p_col2'>
+                <option value=" 'tip' ">Tip</option>
+                <option value=" 'nr_arme' ">Numar arme</option>
+                <option value=" 'diametru_tun' ">Diametru tun</option>
+                <option value=" 'deplasament' ">Deplasament</option>
+            </select></td>
+        <tr>
+            <td colspan="2" ><input type=submit class="submit-btn" value="Afiseaza"></td>
+        </tr>
+    </table>
+</form>
+<a href="Pagina_principala.html">Inapoi la pagina principala!</a>
+</div>
+</body>
+</html>

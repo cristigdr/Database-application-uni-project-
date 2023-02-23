@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="Style.css">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Interogarea6.b</title>
+</head>
+<body>
+<div class="interogare">
+<h1>Interogarea 6.b.</h1>
+<p class="cerinta"><b>Cerinta colocviu partial:</b> Să se găsească pentru fiecare bătălie numărul claselor din fiecare categorie
+  rezultat.</p>
+<p class="rezolvare"><b>Cod SQL:</b><br>
+  SELECT c.batalie, c.rezultat, COUNT(n.clasa) AS "Numarul claselor" <br>
+  FROM nave n JOIN consecinte c ON (n.nume = c.nava) <br>
+  GROUP BY batalie, rezultat <br>
+  ORDER BY batalie;</p>
+<form action="rezultate6b.php" method=post class="formular">
+  <table>
+    <tr>
+      <td>
+      <td colspan="2" ><input type=submit class="submit-btn" value="Afiseaza"></td>
+      </td>
+    </tr>
+  </table>
+</form>
+
+<a href="Pagina_principala.html">Inapoi la pagina principala!</a>
+</div>
+</body>
+</html>
